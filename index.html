@@ -52,7 +52,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
-       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+       href="/">&nbsp;<strong>Hello World!</strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -175,6 +175,46 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/19/blog20210319/">Dokcer配置Telegram-cli</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/19/blog20210319/">
+          
+          
+            
+          
+          安装1docker pull peng4740/telegram-cli
+在登录的用户目录下创建telegram-cli文件夹,赋777权限
+1mkdir telegram-cli
+给文件夹权限，让容器里的非ROOT用户能读取配置
+1chmod -R 777 ~/telegram-cli/
+运行docker
+1docker run -itd -v ~/telegram-cli/:/home/tel
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-19 09:40" pubdate>
+              2021-03-19
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
 
   <div class="row mx-auto index-card">
     

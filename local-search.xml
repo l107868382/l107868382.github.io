@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>Dokcer配置Telegram-cli</title>
+    <link href="/2021/03/19/blog20210319/"/>
+    <url>/2021/03/19/blog20210319/</url>
+    
+    <content type="html"><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker pull peng4740/telegram-cli<br></code></pre></td></tr></table></figure><p>在登录的用户目录下创建telegram-cli文件夹,赋777权限</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mkdir telegram-cli<br></code></pre></td></tr></table></figure><p>给文件夹权限，让容器里的非ROOT用户能读取配置</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">chmod -R 777 ~/telegram-cli/<br></code></pre></td></tr></table></figure><p>运行docker</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker run -itd -v ~/telegram-cli/:/home/telegramd/.telegram-cli/ --name=tg --restart=always peng4740/telegram-cli<br></code></pre></td></tr></table></figure><h2 id="配置账号"><a href="#配置账号" class="headerlink" title="配置账号"></a>配置账号</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker exec -it tg telegram-cli<br><span class="hljs-meta">#</span><span class="bash">输入手机号，TG APP里接验证码登录</span><br><span class="hljs-meta">#</span><span class="bash">登录完成后直接CTRL+C或者CTRL+P+CTRL+Q退出</span><br></code></pre></td></tr></table></figure><h2 id="使用telegram-cli发消息"><a href="#使用telegram-cli发消息" class="headerlink" title="使用telegram-cli发消息"></a>使用telegram-cli发消息</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker exec tg telegram-cli  -We &quot;msg &lt;对方名称&gt; &lt;消息&gt;&quot;<br></code></pre></td></tr></table></figure><p><strong>注意是名称，而不是用户名或者频道的ID，也就是聊天时显示的名称。当名称有空格时，用下划线代替。</strong></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2021/03/18/hello-world/"/>
     <url>/2021/03/18/hello-world/</url>
